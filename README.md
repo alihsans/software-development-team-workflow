@@ -29,3 +29,6 @@ Sistem, ilişkisel veritabanı modeli üzerinde iki temel tablo ile çalışmakt
 
 ### 2. İş Akışı ve Görev Yönetim Paneli
 ![Görev Listesi Paneli](arayuz.png)
+
+### Sunum videosu linki
+https://youtu.be/49XxfZxNGXs
