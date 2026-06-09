@@ -91,10 +91,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $oncelik = $_POST["oncelik"];
         $durum = $_POST["durum"];
         if(!empty($proje_adi) && !empty($gorev_basligi)){
-            $up = $db->prepare("UPDATE gorevler SET proje_adi = :p_adi, gorev_basligi = :g_baslik, detaylar = :detay, oncelik = :onc, durum = :durum WHERE id = :id AND kullanici_id = :k_id");
+            // Herkes görevi güncelleyebilir ortak havuz olduğu için
+            $up = $db->prepare("UPDATE gorevler SET proje_adi = :p_adi, gorev_basligi = :g_baslik, detaylar = :detay, oncelik = :onc, durum = :durum WHERE id = :id");
             $up->execute([
                 ':p_adi' => $proje_adi, ':g_baslik' => $gorev_basligi, ':detay' => $detaylar,
-                ':onc' => $oncelik, ':durum' => $durum, ':id' => $id, ':k_id' => $_SESSION["id"]
+                ':onc' => $oncelik, ':durum' => $durum, ':id' => $id
             ]);
             header("location: index.php");
             exit;
@@ -104,8 +105,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // 5. GÖREV SİLME (DELETE)
 if($action == 'delete' && isset($_GET['id']) && isset($_SESSION["loggedin"])) {
-    $del = $db->prepare("DELETE FROM gorevler WHERE id = :id AND kullanici_id = :k_id");
-    $del->execute([':id' => $_GET['id'], ':k_id' => $_SESSION["id"]]);
+    $del = $db->prepare("DELETE FROM gorevler WHERE id = :id");
+    $del->execute([':id' => $_GET['id']]);
     header("location: index.php");
     exit;
 }
