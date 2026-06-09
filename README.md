@@ -32,3 +32,6 @@ Sistem, ilişkisel veritabanı modeli üzerinde iki temel tablo ile çalışmakt
 
 ### Sunum videosu linki
 https://youtu.be/49XxfZxNGXs
+
+### Web sitesi linki
+http://95.130.171.20/~st22360859050
