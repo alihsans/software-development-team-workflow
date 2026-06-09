@@ -24,11 +24,7 @@ Sistem, ilişkisel veritabanı modeli üzerinde iki temel tablo ile çalışmakt
 2. `index.php` dosyasının en başında yer alan veritabanı bağlantı sabitleri (`DB_SERVER`, `DB_USERNAME`, `DB_PASSWORD`, `DB_NAME`) canlı sunucu mimarisine göre yapılandırılmıştır.
 3. Sunucu tarafında `public_html` dizini altına yüklenen `index.php` dosyası, URL parametreleri (`action=login`, `action=register`, `action=add`, `action=edit`) üzerinden yönlendirmeleri otomatik olarak yakalamaktadır. 
 
-### 1. Kullanıcı Giriş ve Kayıt Ekranı
-![Kullanıcı Giriş Arayüzü](girisekrani.png)
 
-### 2. İş Akışı ve Görev Yönetim Paneli
-![Görev Listesi Paneli](arayuz.png)
 
 ### Sunum videosu linki
 https://youtu.be/49XxfZxNGXs
